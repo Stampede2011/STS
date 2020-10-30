@@ -1,66 +1,62 @@
 package co.carrd.andwhat5.sts;
 
 import co.carrd.andwhat5.sts.interfaces.IBooster;
-import com.pixelmongenerations.common.entity.pixelmon.EntityPixelmon;
-import com.pixelmongenerations.common.item.ItemPixelmonSprite;
+import com.pixelmongenerations.core.config.PixelmonItems;
+import com.pixelmongenerations.core.enums.EnumSpecies;
 import com.pixelmongenerations.core.storage.PixelmonStorage;
 import com.pixelmongenerations.core.storage.PlayerStorage;
+import com.pixelmongenerations.core.util.helper.SpriteHelper;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.world.World;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.event.cause.Cause;
-import org.spongepowered.api.event.cause.EventContext;
-import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.common.item.inventory.util.ItemStackUtil;
 
-import java.math.BigDecimal;
-
-public class Utilities {
-    public static ItemStack getPokemonItem(EntityPixelmon pokemon) {
-        /*String filePath = "pixelmon:sprites/";
-        String specialTexture = pokemon.getCustomTexture();
-        if ((pokemon.getFormEnum() instanceof EnumNoForm || pokemon.getFormEnum() instanceof EnumPrimal) && pokemon.getFormEnum().isTemporary())
-        {
-            ItemPixelmonSprite.getPhoto()
-            specialTexture = EnumSpecialTexture.None;
+public class Utilities
+{
+    public static org.spongepowered.api.item.inventory.ItemStack getPokemonItem(EnumSpecies species, int form, boolean isEgg, boolean isShiny) {
+        ItemStack nativeItem = new ItemStack(PixelmonItems.itemPixelmonSprite);
+        NBTTagCompound nbt = new NBTTagCompound();
+        String idValue = String.format("%03d", new Object[] { Integer.valueOf(species.getNationalPokedexInteger()) });
+        if (isEgg) {
+            switch (species) {
+                case Manaphy:
+                case Togepi:
+                    nbt.setString("SpriteName", "pixelmon:sprites/eggs/manaphy1");
+                    nativeItem.setTagCompound(nbt);
+                    return ItemStackUtil.fromNative(nativeItem);
+            }
+            nbt.setString("SpriteName", "pixelmon:sprites/eggs/egg1");
+        } else if (isShiny) {
+            nbt.setString("SpriteName", "pixelmon:sprites/shinypokemon/" + idValue + SpriteHelper.getSpriteExtra(species.name, form));
+        } else {
+            nbt.setString("SpriteName", "pixelmon:sprites/pokemon/" + idValue + SpriteHelper.getSpriteExtra(species.name, form));
         }
-        if (pokemon.isShiny()) {
-            filePath = filePath + "shiny";
-            specialTexture = EnumSpecialTexture.None;
-        }
-        String path = filePath + "pokemon/" + pokemon.getSpecies().getNationalPokedexNumber() + SpriteHelper.getSpriteExtra(pokemon.getSpecies().name, pokemon.getForm(), pokemon.getGender());
-        if (pokemon.isEgg()) {
-            path = "pixelmon:sprites/eggs/egg1";
-        }
-        ItemStack itemStack = ItemStack.of(STS.getInstance().spriteItemType);
-        DataContainer dc = itemStack.toContainer();
-        dc.set(DataQuery.of("UnsafeData", "SpriteName"), path);
-        return ItemStack.builder().fromContainer(dc).build();
-        */
-        return ItemStackUtil.fromNative(ItemPixelmonSprite.getPhoto(pokemon));
+        nativeItem.setTagCompound(nbt);
+        return ItemStackUtil.fromNative(nativeItem);
     }
 
-    public static int getPrice(EntityPixelmon pokemon) {
+    public static int getPrice(NBTTagCompound pokemon) {
         int money = 0;
-        for (IBooster booster : STS.boosters) {
+        for (IBooster booster : STS.boosters)
             money += booster.getMoney(pokemon);
-        }
         return money;
     }
 
-    public static boolean sellPokemon(Player player, EntityPixelmon pokemon1, int price) {
-        PlayerStorage playerPartyStorage = (PlayerStorage) PixelmonStorage.pokeBallManager.getPlayerStorage((EntityPlayerMP)player).orElse(null);
-        for (int i = 0; i < 6; ++i) {
-            EntityPixelmon pokemon = playerPartyStorage.getPokemon(i, (World) player.getWorld());
-            if (pokemon == null || !pokemon == pokemon1)
-                continue;
-            playerPartyStorage.set(i, null);
-            STS.econ.getOrCreateAccount(player.getUniqueId())
-                    .ifPresent(e ->
-                            e.deposit(STS.econ.getDefaultCurrency(), BigDecimal.valueOf(price), Cause.of(EventContext.empty(), STS.getInstance())));
-            return true;
+    public static boolean sellPokemon(Player player, NBTTagCompound pokemon, int price) {
+        PlayerStorage ps = (PlayerStorage)PixelmonStorage.pokeBallManager.getPlayerStorage((EntityPlayerMP)player).orElse(null);
+        if (ps == null)
+            return false;
+        int slot = 0;
+        for (NBTTagCompound nbt : ps.partyPokemon) {
+
+            if (nbt == pokemon) {
+                ps.removeFromPartyPlayer(slot);
+                ps.addCurrency(price);
+                return true;
+            }
+            slot++;
         }
-        return false;
+        return true;
     }
 }
-

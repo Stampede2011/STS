@@ -2,20 +2,20 @@ package co.carrd.andwhat5.sts.boosters;
 
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
-import com.pixelmonmod.pixelmon.enums.EnumSpecies;
-import java.util.ArrayList;
+import com.pixelmongenerations.core.enums.EnumSpecies;
+import net.minecraft.nbt.NBTTagCompound;
+
 
 public class LegendaryBooster
-implements IBooster {
-    @Override
-    public int getMoney(Pokemon pokemon) {
-        return EnumSpecies.legendaries.contains(pokemon.getSpecies().name) ? STSConfig.General.legendaryBooster : 0;
+        implements IBooster
+{
+    public int getMoney(NBTTagCompound pokemon) {
+        boolean isLegend = EnumSpecies.legendaries.contains(pokemon.getString("Name"));
+        boolean isUltraBeast = EnumSpecies.ultrabeasts.contains(pokemon.getString("Name"));
+        return (isLegend || isUltraBeast) ? STSConfig.General.legendaryBooster : 0;
     }
 
-    @Override
-    public String getItemLore() {
-        return "Legendary Pokemon Booster: $";
-    }
+
+
+    public String getItemLore() { return "Legend Boost: $"; }
 }
-

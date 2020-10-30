@@ -2,18 +2,18 @@ package co.carrd.andwhat5.sts.boosters;
 
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
+import net.minecraft.nbt.NBTTagCompound;
+
+
 
 public class HiddenAbilityBooster
-implements IBooster {
-    @Override
-    public int getMoney(Pokemon pokemon) {
-        return pokemon.getAbilitySlot() == 2 ? STSConfig.General.hiddenAbilityBooster : 0;
-    }
+        implements IBooster
+{
+    public int getMoney(NBTTagCompound pokemon) { return (pokemon.getInteger("AbilitySlot") == 2) ? STSConfig.General.hiddenAbilityBooster : 0; }
 
-    @Override
-    public String getItemLore() {
-        return "Hidden Ability Booster: $";
-    }
+
+
+
+
+    public String getItemLore() { return "Hidden Ability Booster: $"; }
 }
-
