@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/STS.iml" filepath="$PROJECT_DIR$/STS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/STS.api.iml" filepath="$PROJECT_DIR$/.idea/modules/STS.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/STS.main.iml" filepath="$PROJECT_DIR$/.idea/modules/STS.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/STS.test.iml" filepath="$PROJECT_DIR$/.idea/modules/STS.test.iml" />
+    </modules>
+  </component>
+</project>

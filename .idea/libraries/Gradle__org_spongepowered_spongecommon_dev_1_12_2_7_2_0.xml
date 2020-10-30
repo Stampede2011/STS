@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.spongepowered:spongecommon:dev:1.12.2-7.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/spongecommon/1.12.2-7.2.0/96cf840926f6e0f6319a66e4ea28e0e70f47903a/spongecommon-1.12.2-7.2.0-dev.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/spongecommon/1.12.2-7.2.0/6bcb4c5c423730109224e4f8c84d0cfeda14861c/spongecommon-1.12.2-7.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
