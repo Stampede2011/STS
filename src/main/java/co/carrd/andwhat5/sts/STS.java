@@ -1,13 +1,8 @@
 package co.carrd.andwhat5.sts;
 
-import co.carrd.andwhat5.sts.boosters.BoosterMoneyPerLevel;
-import co.carrd.andwhat5.sts.boosters.BoosterShiny;
-import co.carrd.andwhat5.sts.boosters.CustomTextureBooster;
-import co.carrd.andwhat5.sts.boosters.HiddenAbilityBooster;
-import co.carrd.andwhat5.sts.boosters.IVBooster;
-import co.carrd.andwhat5.sts.boosters.LegendaryBooster;
-import co.carrd.andwhat5.sts.boosters.PerfectIVBooster;
+import co.carrd.andwhat5.sts.boosters.*;
 import co.carrd.andwhat5.sts.commands.CommandSTS;
+import co.carrd.andwhat5.sts.commands.CommandReload;
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
 import com.google.common.reflect.TypeToken;
@@ -20,7 +15,6 @@ import ninja.leaping.configurate.loader.ConfigurationLoader;
 import ninja.leaping.configurate.objectmapping.ObjectMappingException;
 import org.slf4j.Logger;
 import org.spongepowered.api.Sponge;
-import org.spongepowered.api.command.args.GenericArguments;
 import org.spongepowered.api.command.spec.CommandSpec;
 import org.spongepowered.api.config.DefaultConfig;
 import org.spongepowered.api.event.Listener;
@@ -29,7 +23,7 @@ import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.plugin.PluginContainer;
 import org.spongepowered.api.text.Text;
 
-@Plugin(id = "sts", name = "STS", authors = {"AnDwHaT5"}, version = "1.0.6")
+@Plugin(id = "sts", name = "STS", authors = {"AnDwHaT5"}, version = "1.1.0")
 public class STS {
     private static STS instance;
     @Inject
@@ -75,21 +69,23 @@ public class STS {
             e.printStackTrace();
         }
 
-
         boosters.add(new BoosterMoneyPerLevel());
-        boosters.add(new BoosterShiny());
-        boosters.add(new CustomTextureBooster());
-        boosters.add(new HiddenAbilityBooster());
+        boosters.add(new MaxLevelBooster());
         boosters.add(new IVBooster());
-        boosters.add(new LegendaryBooster());
         boosters.add(new PerfectIVBooster());
+        boosters.add(new EVBooster());
+        boosters.add(new PerfectEVBooster());
+        boosters.add(new HiddenAbilityBooster());
+        boosters.add(new BoosterShiny());
+        boosters.add(new LegendaryBooster());
+        boosters.add(new SpecialTextureBooster());
 
+        CommandSpec sts = CommandSpec.builder()
+                .description(Text.of("Opens the Server Trade Station GUI."))
+                .permission("sts.sts.base")
+                .child(CommandReload.build(), new String[] { "reload"})
+                .executor(new CommandSTS()).build();
 
-
-
-
-
-        CommandSpec sts = CommandSpec.builder().description(Text.of("Opens the Sell to Server GUI.")).permission("sts.sts.base").arguments(GenericArguments.optional(GenericArguments.string(Text.of("reload")))).executor(new CommandSTS()).build();
         Sponge.getCommandManager().register(this, sts, new String[] { "sts" });
     }
 }

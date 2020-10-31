@@ -1,5 +1,6 @@
 package co.carrd.andwhat5.sts;
 
+import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
 import com.pixelmongenerations.core.config.PixelmonItems;
 import com.pixelmongenerations.core.enums.EnumSpecies;
@@ -10,6 +11,8 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import org.spongepowered.api.entity.living.player.Player;
+import org.spongepowered.api.text.Text;
+import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.common.item.inventory.util.ItemStackUtil;
 
 public class Utilities
@@ -57,6 +60,15 @@ public class Utilities
             }
             slot++;
         }
-        return true;
+        return false;
     }
+
+    public static Text toText(String msg) {
+        return TextSerializers.FORMATTING_CODE.deserialize(msg);
+    }
+
+    public static Text getMessage(String msg) {
+        return toText(STSConfig.Messages.prefix + msg);
+    }
+
 }

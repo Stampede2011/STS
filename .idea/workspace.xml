@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce535e6b-00d6-4636-94a3-837a8b9f38f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -14,71 +13,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/STS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/BoosterMoneyPerLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/BoosterMoneyPerLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/BoosterShiny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/BoosterShiny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/CustomTextureBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/CustomTextureBooster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/CustomTextureBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/SpecialTextureBooster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/HiddenAbilityBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/HiddenAbilityBooster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/LegendaryBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/LegendaryBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/MaxLevelBooster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectEVBooster.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectIVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectIVBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/UltraBeastBooster.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/interfaces/IBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/interfaces/IBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/animation/AnimUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/animation/Animatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/animation/Animator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/animation/Frame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/Arguments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/CommandElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/FlagsElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/SequenceElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/CatalogTypeParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/ChoicesParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/CommandParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/DateParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/DelegateParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/DurationParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/FunctionParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/LocationParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/NumberParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/OptionalParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/OrSourceParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/PlayerParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/PositionParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/PredicateParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/SelectorParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/StandardParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/StringParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/UserParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/ValueParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/argument/parser/WorldParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/Aliases.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/Children.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/CommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/Description.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/command/Permission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/configuration/ConfigHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/configuration/ConfigurationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/configuration/ConfigurationNodeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/configuration/NodeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/Displayable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/Element.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/Layout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/inventory/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/message/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/message/MessageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/registry/Registry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/sponge/wondertrade/teslalibs/registry/RegistryService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" afterDir="false" />
     </list>
@@ -126,7 +79,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="STS" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="forgegradle" type="c8890929:TasksNode$1" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="STS" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -167,7 +125,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.STS [jar]">
+  <component name="RunManager" selected="Gradle.STS build">
     <configuration name="STS run client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
       <module name="STS.main" />
@@ -260,7 +218,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603920984058</updated>
       <workItem from="1603920988934" duration="9013000" />
-      <workItem from="1603997637480" duration="5541000" />
+      <workItem from="1603997637480" duration="33335000" />
     </task>
     <servers />
   </component>

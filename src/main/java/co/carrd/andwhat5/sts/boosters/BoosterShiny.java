@@ -10,11 +10,10 @@ public class BoosterShiny
 {
     public int getMoney(NBTTagCompound pokemon) {
         boolean isShiny = pokemon.getBoolean("IsShiny");
-        return isShiny ? STSConfig.General.shinyBooster : 0;
+        return isShiny ? STSConfig.Boosters.shinyBooster : 0;
     }
 
-
-
-
-    public String getItemLore() { return "Shiny Boost: $"; }
+    public String getItemLore() {
+        return "Shiny Boost";
+    }
 }

@@ -4,7 +4,6 @@ import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
 import net.minecraft.nbt.NBTTagCompound;
 
-
 public class PerfectIVBooster
         implements IBooster
 {
@@ -15,11 +14,11 @@ public class PerfectIVBooster
         float ivSpeed = pokemon.getByte("IVSpeed");
         float ivSAtk = pokemon.getByte("IVSpAtt");
         float ivSDef = pokemon.getByte("IVSpDef");
-        int per = Math.round((ivHP + ivDef + ivAtk + ivSpeed + ivSAtk + ivSDef) / 186.0F * 100.0F);
-        return (per == 100) ? STSConfig.General.perfectIVBooster : 0;
+        int total = Math.round((ivHP + ivDef + ivAtk + ivSpeed + ivSAtk + ivSDef) / 186.0F * 100.0F);
+        return (total == 100) ? STSConfig.Boosters.perfectIVBooster : 0;
     }
 
-
-
-    public String getItemLore() { return "Perfect IV Booster: $"; }
+    public String getItemLore() {
+        return "Perfect IV Booster";
+    }
 }

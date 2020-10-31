@@ -9,10 +9,10 @@ public class BoosterMoneyPerLevel
 {
     public int getMoney(NBTTagCompound pokemon) {
         int level = pokemon.getInteger("Level");
-        return level * STSConfig.General.moneyPerLevel;
+        return level * STSConfig.Boosters.moneyPerLevel;
     }
 
     public String getItemLore() {
-        return "Level Money: $";
+        return "Level Money";
     }
 }

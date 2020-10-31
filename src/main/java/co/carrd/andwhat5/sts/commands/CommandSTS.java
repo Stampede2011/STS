@@ -1,6 +1,8 @@
 package co.carrd.andwhat5.sts.commands;
 
 import co.carrd.andwhat5.sts.STS;
+import co.carrd.andwhat5.sts.Utilities;
+import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.ui.UISTS;
 import com.pixelmongenerations.core.storage.PixelmonStorage;
 import com.pixelmongenerations.core.storage.PlayerStorage;
@@ -22,30 +24,11 @@ public class CommandSTS
     public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
         if (src instanceof Player) {
 
-            if (args.hasAny("reload"))
-            {
-                if (((String)args.getOne("reload").get()).equalsIgnoreCase("reload")) {
-                    if (src.hasPermission("sts.sts.admin")) {
-                        try {
-                            STS.getInstance().loadConfig();
-                            src.sendMessage(Text.of("[STS] Reloaded config!"));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        } catch (ObjectMappingException e) {
-                            e.printStackTrace();
-                        }
-                        return CommandResult.success();
-                    }
-                    src.sendMessage(Text.of("[STS] You do not have permission to use this."));
-                    return CommandResult.success();
-                }
-            }
-
             Player player = (Player)src;
             PlayerStorage storage = (PlayerStorage)PixelmonStorage.pokeBallManager.getPlayerStorage((EntityPlayerMP)player).orElse(null);
             if (storage == null) {
 
-                player.sendMessage(Text.of("[STS] Could not load your party."));
+                src.sendMessage(Utilities.getMessage(STSConfig.Messages.loadError));
                 return CommandResult.success();
             }
             UISTS ui = new UISTS(player, storage.partyPokemon);
