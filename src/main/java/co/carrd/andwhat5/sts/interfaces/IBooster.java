@@ -1,10 +1,9 @@
 package co.carrd.andwhat5.sts.interfaces;
 
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
+import net.minecraft.nbt.NBTTagCompound;
 
 public interface IBooster {
-    public int getMoney(Pokemon var1);
+    int getMoney(NBTTagCompound paramNBTTagCompound);
 
-    public String getItemLore();
+    String getItemLore();
 }
-

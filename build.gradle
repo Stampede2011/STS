@@ -21,9 +21,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 group 'agp.andwhat5'
-version '1.1.2'
-ext.spongeversion = '7.2.0-SNAPSHOT'
-ext.teslaversion = '1.1.6'
+version '1.1.0'
 
 repositories {
     maven {
@@ -37,7 +35,7 @@ repositories {
 
 dependencies {
     compile 'org.spongepowered:spongeapi:7.1.0'
-    compile "com.github.SimonFlash.TeslaPowered:TeslaLibs:v${teslaversion}"
+    compile "com.github.SimonFlash.TeslaPowered:TeslaLibs:v1.1.6"
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
     annotationProcessor("org.spongepowered:spongecommon:1.12.2-7.2.0:dev")
@@ -49,8 +47,8 @@ dependencies {
     }
 }
 
-jar {
-    archiveName = "${project.name}-s${spongeversion[0..2]}-t${teslaversion}-GENERATIONS-v${version}.jar"
+    jar {
+        archiveName = "${project.name}-${version}.jar"
 }
 
 minecraft {
