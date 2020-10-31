@@ -2,19 +2,18 @@ package co.carrd.andwhat5.sts.boosters;
 
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
+import net.minecraft.nbt.NBTTagCompound;
+
 
 public class BoosterShiny
-implements IBooster {
-    @Override
-    public int getMoney(Pokemon pokemon) {
-        boolean isShiny = pokemon.isShiny();
-        return isShiny ? STSConfig.General.shinyBooster : 0;
+        implements IBooster
+{
+    public int getMoney(NBTTagCompound pokemon) {
+        boolean isShiny = pokemon.getBoolean("IsShiny");
+        return isShiny ? STSConfig.Boosters.shinyBooster : 0;
     }
 
-    @Override
     public String getItemLore() {
-        return "Shiny Pokemon Booster: $";
+        return "Shiny Boost";
     }
 }
-

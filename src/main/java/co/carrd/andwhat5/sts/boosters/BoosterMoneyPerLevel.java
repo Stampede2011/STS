@@ -2,19 +2,17 @@ package co.carrd.andwhat5.sts.boosters;
 
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
-import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
+import net.minecraft.nbt.NBTTagCompound;
 
 public class BoosterMoneyPerLevel
-implements IBooster {
-    @Override
-    public int getMoney(Pokemon pokemon) {
-        int level = pokemon.getLevel();
-        return level * STSConfig.General.moneyPerLevel;
+        implements IBooster
+{
+    public int getMoney(NBTTagCompound pokemon) {
+        int level = pokemon.getInteger("Level");
+        return level * STSConfig.Boosters.moneyPerLevel;
     }
 
-    @Override
     public String getItemLore() {
-        return "Money from Level : $";
+        return "Level Money";
     }
 }
-
