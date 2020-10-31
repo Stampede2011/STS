@@ -161,31 +161,6 @@ public class STSConfig {
             public static List<String> lore = Lists.newArrayList();
         }
 
-//        @Setting(comment = "The amount of money given to the player if the Pokemon has a special texture.")
-//        Border paneTop = new Border();
-//
-//        @Setting(comment = "The amount of money given to the player if the Pokemon has a special texture.")
-//        Border paneMiddle = new Border();
-//
-//        @Setting(comment = "The amount of money given to the player if the Pokemon has a special texture.")
-//        Border paneBottom = new Border();
-//
-//        @ConfigSerializable
-//        public static class Border
-//        {
-//            @Setting
-//            public static ItemType itemType = ItemTypes.STAINED_GLASS_PANE;
-//
-//            @Setting
-//            public static int unsafeDamage = 0;
-//
-//            @Setting
-//            public static String displayName = "";
-//
-//            @Setting
-//            public static List<String> lore = Lists.newArrayList();
-//        }
-
     }
 
 }
