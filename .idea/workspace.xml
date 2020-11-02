@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce535e6b-00d6-4636-94a3-837a8b9f38f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/EVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/EVBooster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectEVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectEVBooster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,6 +207,7 @@
       <updated>1603920984058</updated>
       <workItem from="1603920988934" duration="9013000" />
       <workItem from="1603997637480" duration="33335000" />
+      <workItem from="1604181382344" duration="9963000" />
     </task>
     <servers />
   </component>

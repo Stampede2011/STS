@@ -1,10 +1,8 @@
 package co.carrd.andwhat5.sts.boosters;
 
-import co.carrd.andwhat5.sts.Utilities;
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
 import net.minecraft.nbt.NBTTagCompound;
-import org.spongepowered.api.Sponge;
 
 public class IVBooster
         implements IBooster

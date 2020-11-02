@@ -11,25 +11,22 @@ import com.mcsimonflash.sponge.teslalibs.inventory.View;
 import com.pixelmongenerations.core.enums.EnumSpecies;
 import com.pixelmongenerations.core.storage.PixelmonStorage;
 import com.pixelmongenerations.core.storage.PlayerStorage;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import org.spongepowered.api.Sponge;
-import org.spongepowered.api.data.DataContainer;
 import org.spongepowered.api.data.DataQuery;
 import org.spongepowered.api.data.key.Keys;
 import org.spongepowered.api.data.type.DyeColors;
 import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.item.ItemType;
 import org.spongepowered.api.item.ItemTypes;
 import org.spongepowered.api.item.inventory.InventoryArchetypes;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.item.inventory.property.InventoryTitle;
 import org.spongepowered.api.text.Text;
-import org.spongepowered.api.text.format.TextColors;
-import org.spongepowered.api.text.serializer.TextSerializers;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 
 
 
@@ -56,16 +53,20 @@ public class UIConfirm
         ArrayList<Text> lore = new ArrayList<Text>();
         double total = 0.0D;
         for (IBooster booster : STS.boosters) {
-
             if (booster.getMoney(this.pokemon) != 0) {
                 total += booster.getMoney(this.pokemon);
-                lore.add(Text.of(new Object[] { TextColors.GREEN, booster.getItemLore(), TextColors.AQUA, Integer.valueOf(booster.getMoney(this.pokemon)) }));
+                lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreBooster
+                        .replace("%booster%", booster.getItemLore())
+                        .replace("%price%", String.valueOf(booster.getMoney(this.pokemon)))
+                ));
             }
         }
         lore.add(Text.EMPTY);
-        lore.add(Text.of(new Object[] { TextColors.GREEN, "Total: ", TextColors.AQUA, Double.valueOf(total) }));
+        lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreTotal
+                .replace("%total%", String.valueOf(Double.valueOf(total)))
+        ));
         p.offer(Keys.ITEM_LORE, lore);
-        p.offer(Keys.DISPLAY_NAME, Text.of(new Object[] { TextColors.GOLD, this.pokemon.getString("Name") }));
+        p.offer(Keys.DISPLAY_NAME, Utilities.toText(STSConfig.GUI.Pokemon.displayName.replace("%pokemon%", this.pokemon.getString("Name"))));
         Element pok = Element.of(p);
 
         Consumer<Action.Click> close = c -> {
@@ -83,7 +84,7 @@ public class UIConfirm
         Consumer<Action.Click> sell = s -> {
 
             if (Utilities.sellPokemon(this.player, this.pokemon, this.price)) {
-                this.player.sendMessage(Utilities.toText(String.valueOf(this.price)));
+                STS.getLogger().info(this.player.getName() + " has sold a " + this.pokemon.getString("Name") + " for $" + this.price + "!");
                 this.player.sendMessage(Utilities.getMessage(STSConfig.Messages.sellPokemon
                         .replace("%pokemon%", this.pokemon.getString("Name"))
                         .replace("%price%", String.valueOf(this.price))

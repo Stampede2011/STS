@@ -1,6 +1,7 @@
 package co.carrd.andwhat5.sts;
 
 import co.carrd.andwhat5.sts.interfaces.IBooster;
+
 import java.util.List;
 
 public class STSAPI

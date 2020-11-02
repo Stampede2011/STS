@@ -19,7 +19,7 @@ public class STSConfig {
     public static class Messages
     {
         @Setting
-        public static String prefix = "&8[&a&lSTS&8] &f";
+        public static String prefix = "&8[&6&lSTS&8] &f";
 
         @Setting
         public static String lastPokemon = "&cYou can't sell your last Pokemon!";
@@ -71,8 +71,11 @@ public class STSConfig {
         @Setting(comment = "The amount of money given if the Pokemon is a legendary.")
         public static int legendaryBooster = 4000;
 
-        @Setting(comment = "The amount of money given to the player if the Pokemon has a special texture.")
+        @Setting(comment = "The amount of money given if the Pokemon has a special texture.")
         public static int specialTextureBooster = 1000;
+
+        @Setting(comment = "The amount of money given if the Pokemon has a custom texture (via TextureManager).")
+        public static int customTextureBooster = 1000;
     }
 
     @Setting(comment = "Customize the look of the GUI.")

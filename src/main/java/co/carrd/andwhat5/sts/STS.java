@@ -1,15 +1,12 @@
 package co.carrd.andwhat5.sts;
 
 import co.carrd.andwhat5.sts.boosters.*;
-import co.carrd.andwhat5.sts.commands.CommandSTS;
 import co.carrd.andwhat5.sts.commands.CommandReload;
+import co.carrd.andwhat5.sts.commands.CommandSTS;
 import co.carrd.andwhat5.sts.config.STSConfig;
 import co.carrd.andwhat5.sts.interfaces.IBooster;
 import com.google.common.reflect.TypeToken;
 import com.google.inject.Inject;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.loader.ConfigurationLoader;
 import ninja.leaping.configurate.objectmapping.ObjectMappingException;
@@ -23,6 +20,10 @@ import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.plugin.PluginContainer;
 import org.spongepowered.api.text.Text;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 @Plugin(id = "sts", name = "STS", authors = {"AnDwHaT5"}, version = "1.1.0")
 public class STS {
     private static STS instance;
@@ -33,20 +34,15 @@ public class STS {
 
     public static STS getInstance() { return instance; }
 
-
-
     @Inject
     @DefaultConfig(sharedRoot = false)
     private ConfigurationLoader<CommentedConfigurationNode> configLoader;
 
-
     public STSConfig config;
-
 
     private CommentedConfigurationNode node;
 
     public static List<IBooster> boosters = new ArrayList();
-
 
     public void loadConfig() throws IOException, ObjectMappingException {
         this.node = (CommentedConfigurationNode)this.configLoader.load();
@@ -79,6 +75,7 @@ public class STS {
         boosters.add(new BoosterShiny());
         boosters.add(new LegendaryBooster());
         boosters.add(new SpecialTextureBooster());
+        boosters.add(new CustomTextureBooster());
 
         CommandSpec sts = CommandSpec.builder()
                 .description(Text.of("Opens the Server Trade Station GUI."))
@@ -87,5 +84,9 @@ public class STS {
                 .executor(new CommandSTS()).build();
 
         Sponge.getCommandManager().register(this, sts, new String[] { "sts" });
+    }
+
+    public static Logger getLogger() {
+        return instance.logger;
     }
 }
