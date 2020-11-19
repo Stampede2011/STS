@@ -21,7 +21,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 group 'agp.andwhat5'
-version '1.1.0'
+version '8.0.0-1.1.1'
 
 repositories {
     maven {
@@ -47,8 +47,8 @@ dependencies {
     }
 }
 
-    jar {
-        archiveName = "${project.name}-${version}.jar"
+jar {
+        archiveName = "${project.name}-SERVER-${version}.jar"
 }
 
 minecraft {

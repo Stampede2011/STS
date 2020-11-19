@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Plugin(id = "sts", name = "STS", authors = {"AnDwHaT5"}, version = "1.1.0")
+@Plugin(id = "sts", name = "STS", authors = {"AnDwHaT5"}, version = "8.0.0-1.1.1")
 public class STS {
     private static STS instance;
     @Inject

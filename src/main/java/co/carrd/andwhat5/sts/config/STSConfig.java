@@ -38,7 +38,7 @@ public class STSConfig {
 
     }
 
-    @Setting(comment = "All available boosters to modify the price. Set to 0 to disable a booster.")
+    @Setting(comment = "All available boosters to modify the price as whole numbers. Set to 0 to disable a booster.")
     Boosters boosters = new Boosters();
 
     @ConfigSerializable
@@ -76,6 +76,12 @@ public class STSConfig {
 
         @Setting(comment = "The amount of money given if the Pokemon has a custom texture (via TextureManager).")
         public static int customTextureBooster = 1000;
+
+        @Setting(comment = "The percentage to take off if it is an egg.")
+        public static int eggModifier = 0;
+
+        @Setting(comment = "Should eggs show up in the STS menu?")
+        public static boolean allowEggs = true;
     }
 
     @Setting(comment = "Customize the look of the GUI.")

@@ -12,13 +12,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/STS.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/STS.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/STS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/STSAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/EVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/EVBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/IVBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectEVBooster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/boosters/PerfectEVBooster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/commands/CommandSTS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/config/STSConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UIConfirm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/carrd/andwhat5/sts/ui/UISTS.java" afterDir="false" />
@@ -131,6 +134,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="STS [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="STS [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.STS [buildDependents]" />
         <item itemvalue="Gradle.STS [setupDecompWorkspace]" />
         <item itemvalue="Gradle.STS [jar]" />
       </list>
@@ -207,7 +230,11 @@
       <updated>1603920984058</updated>
       <workItem from="1603920988934" duration="9013000" />
       <workItem from="1603997637480" duration="33335000" />
-      <workItem from="1604181382344" duration="9963000" />
+      <workItem from="1604181382344" duration="10684000" />
+      <workItem from="1604388987100" duration="2792000" />
+      <workItem from="1604471405433" duration="6126000" />
+      <workItem from="1604947492650" duration="147000" />
+      <workItem from="1605082016741" duration="13341000" />
     </task>
     <servers />
   </component>

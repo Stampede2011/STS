@@ -58,7 +58,7 @@ public class UISTS
         int slot = 10;
         for (NBTTagCompound poke : this.pokemon) {
 
-            if (poke == null) {
+            if (poke == null || !(!poke.getBoolean("isEgg") || STSConfig.Boosters.allowEggs)) {
 
                 ItemStack emptyItem = Sponge.getRegistry()
                         .createBuilder(ItemStack.Builder.class)
@@ -112,6 +112,14 @@ public class UISTS
                         ));
                     }
                 }
+                if (poke.getBoolean("isEgg") && STSConfig.Boosters.eggModifier != 0) {
+                    double perc = (STSConfig.Boosters.eggModifier / 100.0) * total;
+                    total -= perc;
+                    lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreBooster
+                            .replace("%booster%", "Egg Modifier")
+                            .replace("%price%", String.valueOf(-perc))
+                    ));
+                }
                 lore.add(Text.EMPTY);
                 lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreTotal
                         .replace("%total%", String.valueOf(Double.valueOf(total)))
@@ -125,7 +133,8 @@ public class UISTS
             } else {
                 slot++;
             }
-        }  Layout lay = layout.build();
+        }
+        Layout lay = layout.build();
         View view = View.builder().archetype(InventoryArchetypes.CHEST).property(InventoryTitle.of(Utilities.toText(STSConfig.GUI.mainMenuTitle))).build((STS.getInstance()).container);
         view.define(lay);
         view.open(this.player);

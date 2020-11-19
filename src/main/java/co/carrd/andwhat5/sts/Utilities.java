@@ -41,8 +41,13 @@ public class Utilities
 
     public static int getPrice(NBTTagCompound pokemon) {
         int money = 0;
+
         for (IBooster booster : STS.boosters)
             money += booster.getMoney(pokemon);
+
+        if (pokemon.getBoolean("isEgg") && STSConfig.Boosters.eggModifier != 0)
+            money -= (STSConfig.Boosters.eggModifier / 100.0) * money;
+
         return money;
     }
 

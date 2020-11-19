@@ -61,6 +61,14 @@ public class UIConfirm
                 ));
             }
         }
+        if (pokemon.getBoolean("isEgg") && STSConfig.Boosters.eggModifier != 0) {
+            double perc = (STSConfig.Boosters.eggModifier / 100.0) * total;
+            total -= perc;
+            lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreBooster
+                    .replace("%booster%", "Egg Modifier")
+                    .replace("%price%", String.valueOf(-perc))
+            ));
+        }
         lore.add(Text.EMPTY);
         lore.add(Utilities.toText(STSConfig.GUI.Pokemon.loreTotal
                 .replace("%total%", String.valueOf(Double.valueOf(total)))
