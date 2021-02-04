@@ -143,8 +143,8 @@ public class STSConfig {
             @Setting
             public static int unsafeDamage = 0;
 
-            @Setting(comment = "%pokemon% replaced with Pokemon name. %price% replaced with price of Pokemon.")
-            public static String displayName = "&aSell %pokemon% for $%price%";
+            @Setting(comment = "%pokemon% replaced with Pokemon name. %price% replaced with price of Curry.")
+            public static String displayName = "&aSell %curry% for $%price%";
 
             @Setting(comment = "%pokemon% replaced with Pokemon name. %price% replaced with price of Pokemon.")
             public static List<String> lore = Lists.newArrayList();
